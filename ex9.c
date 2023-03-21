@@ -7,37 +7,35 @@
 
 
 float askDigit(float enterPin, int tries) {
-        printf("Please enter your PIN to continue. You have %d tries: ", tries);
-        scanf("%f", &enterPin);
-    return tries;
+    printf("Please enter your PIN to continue. You have %d tries: ", tries);
+    scanf("%f", &enterPin);
+    return (tries);
 }
 
 int main (){
-
-    int pin = 1234;
+    float pin = 1234;
     int tries = 3;
     float enterPin;
 
-    
+    while (tries != 0) {
 
-    while (tries >= 3) {
-        askDigit(enterPin, tries);
+        printf("Please enter your PIN to continue. You have %d tries: ", tries);
+        scanf("%f", &enterPin);
+
         if (pin == enterPin) {
             printf("You entered the right PIN code.");
+            break;
         }
 
         if (pin != enterPin) {
             tries = tries - 1;
             printf("You entered the wrong PIN code, please try again.\n");
-            askDigit(enterPin, tries);
         }
         if (tries == 0) {
         printf("You used your 3 tries, you can't try anymore.");
         break;
         }
     }
-    
-    
 
     return 0;
 }
