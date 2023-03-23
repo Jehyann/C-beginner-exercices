@@ -23,7 +23,7 @@ int main (){
         scanf("%f", &enterPin);
 
         if (pin == enterPin) {
-            printf("You entered the right PIN code.");
+            printf("Phone unlocked !.");
             break;
         }
 
